@@ -1,0 +1,396 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    line-height: 18px;
+
+}
+
+.post-list{
+    display: grid;
+    /* grid-template-columns: 287px 287px 287px;
+    grid-template-rows: 286px 286px 286px;
+    gap: 15px 18px; */
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    grid-template-rows: auto;
+    /* grid-template-rows: 286px 286px 286px; */
+    gap: 28px;
+    justify-content: center;
+}
+
+.post{
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+.post-image{
+    margin: 0;
+}
+.post-image img{
+    width: 100%;
+    vertical-align: top;
+}
+.post-overlay{
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    /* vertical align */
+    align-items: center;
+    /* horizontal align */
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.post:hover .post-overlay{
+    display: flex;
+}
+
+.post-likes,
+.post-comments{
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px){
+    .post-list{
+        grid-gap: 3px;
+    }
+}
+
+nav{
+    border-bottom: 1px solid rgb(211, 211, 211);
+    height: 53px;
+}
+
+.nav-content{
+    display: grid;
+    grid-template-columns: repeat(3, 310px);
+    grid-template-rows: 53px;
+    grid-gap: 1px;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+ul li{
+    margin: 0;
+    margin-right: 23px;
+}
+.user-img img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+.clip-rule{
+    margin-right: 0;
+}
+
+.insta-logo{
+    margin-left: 0;
+}
+
+.textbox{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.textbox input{
+    width: 199px;
+    height: 12px;
+    padding: 7px;
+    background-color: rgba(247, 247, 247, 0.562);
+    border: 1px solid rgba(190, 190, 190, 0.527);
+    border-radius: 3px;
+    outline: none;
+    cursor: text;
+    background-image: url('search-icon.png');
+    background-size: 11px 11px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 70px;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    color: rgba(145, 145, 145, 0.699);
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: -.5;
+}
+
+/*--------------- Profile section ----------*/
+
+.container{
+    background-color: rgba(247, 247, 247, 0.562);
+
+}
+
+.profile-container{
+    display: grid;
+    grid-template-columns: 293px 614px;
+    grid-template-rows: fit-content;
+    grid-gap: 28px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.profile-img{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.profile-img img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle-container{
+    position: absolute;
+    margin-top: -8px;
+}
+
+.circle{
+    height: 160px;
+    width: 161px;
+    background-color: transparent;
+    border: 3px solid rgba(255,57,191,1);
+    border-radius: 50%;
+}
+
+.description-container{
+    display: grid;
+    grid-template-columns: 359px;
+    grid-template-rows: fit-content fit-content fit-content;
+    padding-top: 30px;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+}
+
+.name h2{
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 32px;
+    margin: -5px 0 -6px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.buttons{
+    display: grid;
+    display: grid;
+    grid-template-columns: 90.46px 35px;
+    grid-template-rows: 27.6px;
+    gap: 9px;
+    margin-left: 20px;
+}
+
+.message{
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;;
+    background-color: #0095F6;
+    border: 1px solid #0095F6;
+    border-radius: 3px;
+    padding: 0 24px;
+    line-height: 26px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.icon{
+    background-image: url("/images/icono.png");
+    background-repeat: no-repeat;
+    background-size: 6px 9px;
+    background-position: center;
+    background-color: #0095F6;
+    height: 27.6px;
+    width: 35px;
+    border: 1px solid #0095F6;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.dots{
+    padding: 8px;
+}
+
+.dots button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 1px 5px;
+}
+
+.followers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.followers a{
+    color: rgba(39, 38, 38, 0.897);
+    text-decoration: none;
+}
+
+.followers ul{
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    text-transform: lowercase;
+    font-size: 16px;
+}
+
+.followers ul li:nth-of-type(1){
+    margin-right: 40px;
+}
+
+.followers li:nth-of-type(2){
+    margin-right: 40px;
+}
+
+.descrip h1{
+    display: inline;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    line-height: 25px;
+    color: rgba(39, 38, 38, 0.897);
+}
+
+.descrip .span-1{
+    line-height: 25px;
+    color: rgba(31, 30, 30, 0.877);
+}
+
+.followed{
+    font-size: 11.9px;
+    font-family: inherit;
+    font-weight: 600;
+    margin-top: 14px;
+    line-height: 14px;
+}
+
+.descrip a{
+    text-decoration: none;
+    color: rgba(122, 119, 119, 0.918);
+}
+
+.descrip a span{
+    color: black;
+}
+
+.stories{
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    grid-template-columns: 924px;
+    grid-template-rows: 142px;
+}
+
+.stories-container{
+    display: flex;
+}
+
+.story{
+    padding: 10px 15px;
+}
+
+.story img{
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.story a{
+    text-decoration: none;
+}
+
+.circle-stories{
+    position: absolute;
+    margin-top: -3.5px;
+    margin-left: -4px;
+}
+
+.circle-st{
+background-color: black;
+height: 83px;
+width: 83px;
+background-color: white;
+border: 1px solid rgba(128, 128, 128, 0.37);
+border-radius: 50%;
+}
+
+.story-container{
+    text-align: center;
+}
+
+.story-container h3{
+    font-size: 14.5px;
+    color: black;
+}
+
+.line-container{
+    margin-top: 30px;
+}
+
+.line{
+    margin: 0 auto;
+    width: 935px;
+    height: 1px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.line-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 935px;
+    height: 52px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.line-icon span span{
+    padding-left: 3px;
+}
+
+.line-icon-post{
+    margin-right: 60px;
+    font-weight: 500;
+    color: black;
+}
+
+.line-icon-tag{
+    color: rgb(88, 88, 88);
+}
